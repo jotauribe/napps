@@ -3,17 +3,17 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class Movie {
   @PrimaryGeneratedColumn()
-  id: number
+  id: number;
 
   @Column()
-  name: string
+  name: string;
 
   @Column()
-  year: number
+  year: number;
 
   @Column()
-  type: string
+  type: string;
 
   @Column()
-  posterImageUrl: string
+  posterImageUrl: string;
 }
