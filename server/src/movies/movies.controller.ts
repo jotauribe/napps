@@ -1,12 +1,12 @@
 import { Controller, Get } from '@nestjs/common';
 import { MoviesService } from './movies.service';
 
-@Controller()
+@Controller('movies')
 export class MoviesController {
-  constructor(private readonly appService: MoviesService) {}
+  constructor(private readonly service: MoviesService) {}
 
   @Get()
   getMovies() {
-    return this.appService.getMovies();
+    return this.service.getMovies();
   }
 }

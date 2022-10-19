@@ -7,8 +7,10 @@ COPY package.json .
 
 RUN npm install
 
+RUN npm install -g typeorm
+
 COPY . .
 
-EXPOSE 3000
+EXPOSE 3001
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "start:dev"]

@@ -20,7 +20,7 @@ services:
       - DB_USER=root
       - DB_PWD=root
     ports:
-      - '3020:3020'
+      - '3001:3001'
     volumes:
       - './server/:/usr/src/server'
       - /usr/src/server/node_modules/
@@ -35,3 +35,8 @@ services:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=movies
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

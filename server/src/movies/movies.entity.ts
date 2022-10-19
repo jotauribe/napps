@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
+@Entity({ name: 'movies' })
 export class Movie {
   @PrimaryGeneratedColumn()
   id: number;
@@ -14,6 +14,6 @@ export class Movie {
   @Column()
   type: string;
 
-  @Column()
+  @Column({ name: 'poster_image_url' })
   posterImageUrl: string;
 }
